@@ -43,8 +43,19 @@ a:hover {
 .container > * {
   margin: 0.75em 0;
 }
+.heading-wpr {
+  background-image: url("git-img.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  display: flex;
+  margin: 0;
+}
 .container h1 {
   text-align: center;
+  color: #fff;
+  margin: auto;
 }
 .container ul {
   margin-left: 2em;
@@ -61,15 +72,4 @@ a:hover {
 */
 .is-indented::first-line {
   text-indent: 1em;
-}
-/* 
-  Theme color class 
-*/
-.theme-color {
-  color: #fefefe !important;
-  background-color: #333 !important;
-}
-.theme-color > * {
-  color: #fefefe !important;
-  background-color: #333 !important;
 }
