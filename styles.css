@@ -32,7 +32,7 @@ a:hover {
   color: #00f;
 }
 /* 
-  Container class styles
+  Content styles
 */
 
 .container {
@@ -61,4 +61,15 @@ a:hover {
 */
 .is-indented::first-line {
   text-indent: 1em;
+}
+/* 
+  Theme color class 
+*/
+.theme-color {
+  color: #fefefe !important;
+  background-color: #333 !important;
+}
+.theme-color > * {
+  color: #fefefe !important;
+  background-color: #333 !important;
 }
