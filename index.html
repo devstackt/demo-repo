@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>All About Git</h1>
-    <div class="content-wpr">
-      <p>
+    <div class="container">
+      <h1>All About The Awesome Git</h1>
+      <p class="is-indented">
         Git is a distributed version-control system for tracking changes in source code during
-        software development. It is designed for coordinating work among programmers, but it can be
-        used to track changes in any set of files. Its goals include speed, data integrity, and
-        support for distributed, non-linear workflows.
+        software development. It is designed for coordinating work among programmers, but it can be used to track changes
+        in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows.
       </p>
       <p>
-        Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other
+        Git was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds" rel="prefetch" type="text/html" target="_blank" title="wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> in 2005 for development of the <a href="https://en.wikipedia.org/wiki/Linux_kernel" rel="prefetch" type="text/html" target="_blank" title="wikipedia.org/wiki/Linux_kernel">Linux Kernel</a>, with other
         kernel developers contributing to its initial development. Its current maintainer since 2005
-        is Junio Hamano. As with most other distributed version-control systems, and unlike most
+        is Junio Hamano. As with most other distributed <a href="https://en.wikipedia.org/wiki/Version_control" rel="prefetch" type="text/html" target="_blank" title="wikipedia.org/wiki/Version_control">version control</a> systems, and unlike most
         client–server systems, every Git directory on every computer is a full-fledged repository
         with complete history and full version-tracking abilities, independent of network access or
         a central server. Git is free and open-source software distributed under the terms of the
         GNU General Public License version 2.
       </p>
       <h2>History</h2>
-      <p>
+      <p class="is-indented">
         Git development began in April 2005, after many developers of the Linux kernel gave up
         access to BitKeeper, a proprietary source-control management (SCM) system that they had
         formerly used to maintain the project since 2002. The copyright holder of BitKeeper, Larry
@@ -35,7 +34,7 @@
         the creation of another version-control system, Mercurial.
       </p>
       <p>
-        Linus Torvalds wanted a distributed system that he could use like BitKeeper, but none of the
+       Linus Torvalds wanted a distributed system that he could use like BitKeeper, but none of the
         available free systems met his needs. Torvalds cited an example of a source-control
         management system needing 30 seconds to apply a patch and update all associated metadata,
         and noted that this would not scale to the needs of Linux kernel development, where
@@ -67,10 +66,22 @@
         project. Hamano was responsible for the 1.0 release on 21 December 2005 and remains the
         project's maintainer.
       </p>
+      <h2>Security</h2>
+      <p class="is-indented">Git does not provide access-control mechanisms, but was designed for operation with other tools that specialize in access control.</p>
       <p>
+        On 17 December 2014, an exploit was found affecting the Windows and macOS versions of the Git client. An attacker could perform arbitrary code execution on a target computer with Git installed by creating a malicious Git tree (directory) named .git (a directory in Git repositories that stores all the data of the repository) in a different case (such as .GIT or .Git, needed because Git does not allow the all-lowercase version of .git to be created manually) with malicious files in the .git/hooks subdirectory (a folder with executable files that Git runs) on a repository that the attacker made or on a repository that the attacker can modify.
+      </p>
+      <p> If a Windows or Mac user pulls (downloads) a version of the repository with the malicious directory, then switches to that directory, the .git directory will be overwritten (due to the case-insensitive trait of the Windows and Mac filesystems) and the malicious executable files in .git/hooks may be run, which results in the attacker's commands being executed. An attacker could also modify the .git/config configuration file, which allows the attacker to create malicious Git aliases (aliases for Git commands or external commands) or modify extant aliases to execute malicious commands when run. The vulnerability was patched in version 2.2.1 of Git, released on 17 December 2014, and announced the next day</p>
+      <p>Git uses SHA-1 hashes internally. Linus Torvalds has responded that the hash was mostly to guard against accidental corruption, and the security a cryptographically secure hash gives was just an accidental side effect, with the main security being signing elsewhere.</p>
+      <p class="source-info">
         Source:
-        <a href="https://en.wikipedia.org/wiki/Git" rel="prefetch" type="text/html" target="_blank"
-          >Wikipedia.org/wiki/Git</a
+        <a
+          href="https://en.wikipedia.org/wiki/Git"
+          rel="prefetch"
+          type="text/html"
+          target="_blank"
+          title="widipedia.org/wiki/Git"
+          >Wikipedia</a
         >
       </p>
     </div>
